@@ -36,3 +36,6 @@
 
 # SASS cache
 .sass-cache
+
+_site/
+.jekyll-metadata
