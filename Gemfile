@@ -22,6 +22,7 @@ group :jekyll_plugins do
    gem "jekyll-assets"
    gem "match_regex"
    gem "replace_regex"
+   gem 'jekyll-github-metadata'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

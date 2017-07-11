@@ -30,6 +30,7 @@ url: "https://ecoacoustics.info"
 google_analytics: UA-NNNNNNNN-N
 twitter_username: ~
 github_username: ecoacoustics
+repository: ecoacoustics/ecoacoustics
 
 # Build settings
 markdown: kramdown
@@ -48,6 +49,7 @@ plugins:
   - jekyll-feed
   - 'jekyll/scholar'
   - jekyll-assets
+  - jekyll-github-metadata
 exclude:
   - Gemfile
   - Gemfile.lock
