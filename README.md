@@ -1,6 +1,10 @@
 # ecoacoustics.github.io
 Website for collaborative ecoacoustics research
 
+<a href="https://www.netlify.com">
+  <img src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg"/>
+</a>
+
 
 
 ## Local Editing Instructions
