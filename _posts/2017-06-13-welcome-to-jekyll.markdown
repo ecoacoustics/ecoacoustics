@@ -10,6 +10,8 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 
 Jekyll also offers powerful support for code snippets:
 
+# Test code highlighting
+
 {% highlight ruby %}
 def print_hi(name)
   puts "Hi, #{name}"
@@ -26,6 +28,7 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 ```
  
+# Citation testing
 Test citation {% cite Truskinger2014 %}.
 
 {% quote Truskinger2014 %}
@@ -35,14 +38,23 @@ sed do eiusmod tempor.
 Lorem ipsum dolor sit amet, consectetur adipisicing.
 {% endquote %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+# Math Testing
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+What about inline $$a^2 + b^2 = c^2$$ math? Or something more
+complex $$ \mathbf{X}\_{n,p} = \mathbf{A}\_{n,k} \mathbf{B}\_{k,p} $$ like that?
 
-{% bibliography %}
+Block Math examples:
 
----
+$$a^2 + b^2 = c^2$$
 
+$$ \mathsf{Data = PCs} \times \mathsf{Loadings} $$
+
+$$ \mathbf{X}\_{n,p} = \mathbf{A}\_{n,k} \mathbf{B}\_{k,p} $$
+
+# Bibliography testing
+
+## Only references cited on this page
 {% bibliography --cited %}
+
+## All references
+{% bibliography %}

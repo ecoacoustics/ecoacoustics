@@ -39,3 +39,4 @@
 
 _site/
 .jekyll-metadata
+.asset-cache

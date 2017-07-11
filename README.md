@@ -30,7 +30,11 @@ Website for collaborative ecoacoustics research
 
 1. Run the run script
 
-   `.\run.ps1`
+Windows:
+   `> .\bin\run.ps1`
+
+Unix:
+    `$ .\bin\run.sh`
 
 1. Open a browser to <http://localhost:4000/>
 1. Chnage files, reload page

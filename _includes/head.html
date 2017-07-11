@@ -1,0 +1,33 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+  <!-- {{jekyll.environment}} -->
+  {% for asset in site.vendor_assets %}
+  <!-- {{ asset[0] }} -->
+    {%- for source in asset[1].sources -%}
+      {%- if source.env and source.env != jekyll.environment -%}
+      {% continue %}
+      {%- endif -%}
+      {%- capture ext -%}{{source.url | match_regex:'^.*(\.[^.]+)$' }}{%- endcapture -%}
+      {% if ext == ".js" %}
+  <script src="{{source.url}}" integrity="{{source.sri}}" crossorigin="anonymous"></script>
+      {% elsif ext == ".css" %}
+  <link rel="stylesheet" href="{{source.url}}" integrity="{{source.sri}}" crossorigin="anonymous" />
+      {% else %}
+  <!-- {{source.url }} -->
+      {% endif %}
+    {%- endfor -%}
+  {% endfor %}
+
+  {% css main %}
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+  
+
+</head>

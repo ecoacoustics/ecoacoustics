@@ -24,7 +24,10 @@ description: >
 baseurl: ""
 
 # the base hostname & protocol for your site, e.g. http://example.com
-url: "https://ecoacoustics.info" 
+url: "https://ecoacoustics.info"
+
+# integrations
+google_analytics: UA-NNNNNNNN-N
 twitter_username: ~
 github_username: ecoacoustics
 
@@ -38,11 +41,43 @@ scholar:
   sort_by: year,month
   order: descending
 
+liquid:
+  error_mode: strict
 
-theme: minima
-gems:
+plugins:
   - jekyll-feed
   - 'jekyll/scholar'
+  - jekyll-assets
 exclude:
   - Gemfile
   - Gemfile.lock
+  - .asset-cache
+  - bin
+
+# theme settings
+# we're using no theme, but rather a custom theme now
+theme: ~ 
+minima:
+  date_format: "%F %T"
+
+# assets (jekyll-assets)
+
+# our own handrolled vendor asset management
+# assumes all vendor assets come from the cloud
+vendor_assets:
+  bulma:
+    sources: 
+      - url: https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.css
+        sri: sha256-iO7hYdKmrm9CzcGgNrUri6m9rA8CVi0qkG++7J6KlsM=
+        env: development
+      - url: https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css
+        sri: sha256-VC9bpAao257nf22leBRLU7AqKGwS9/Ylz8hfpHmOob4=
+        env: production
+  katex:
+    sources:
+      - url: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js
+        sri: sha256-gNVpJCw01Tg4rruvtWJp9vS0rRchXP2YF+U+b2lp8Po=
+      - url: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css
+        sri: sha256-tkzDFSl16wERzhCWg0ge2tON2+D6Qe9iEaJqM4ZGd4E=
+
+
