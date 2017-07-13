@@ -2,11 +2,18 @@
 layout: default
 ---
 
+<div class="box" >
 <pre>
-    {{ site.pages | jsonify  }}
+{{ page_paths }}
 </pre>
-
-
+</div>
+<div class="box" >
+<pre>
+{{ site.pages | exclude_map:"content" | pretty_json }}
+</pre>
+</div>
+<div class="box" >
 <pre>
  {{ site.github }}
 </pre>
+</div>

@@ -1,3 +1,5 @@
+//= require bulma
+
 
 window.onload = function() {
 

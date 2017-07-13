@@ -5,6 +5,8 @@
     "files.exclude": {
         "**/.git": true,
         "**/.DS_Store": true,
-        "_site": true
+        "_site": true,
+        ".asset-cache": true,
+        ".sass-cache": true
     }
 }
