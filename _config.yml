@@ -19,6 +19,7 @@ description: >
   A community governed, curated, open source, collection of information 
   for all things related to ecoacoustics, soundscapes, and bioacoustics.
   Join us in adding new content!
+logo: /assets/logo.png
 
 # the subpath of your site, e.g. /blog
 baseurl: ""
@@ -28,9 +29,26 @@ url: "https://ecoacoustics.info"
 
 # integrations
 google_analytics: UA-NNNNNNNN-N
-twitter_username: ~
+twitter_username: atruskie
 github_username: ecoacoustics
 repository: ecoacoustics/ecoacoustics
+
+# collections
+collections:
+  groups:
+    output: true
+  hardware: {}
+  software: {}
+  analysis: {}
+  deployment: {}
+  research: {}
+
+# defaults
+defaults: []
+
+# nav pages
+nav_pages:
+  -
 
 # Build settings
 markdown: kramdown
@@ -50,6 +68,7 @@ plugins:
   - 'jekyll/scholar'
   - jekyll-assets
   - jekyll-github-metadata
+  #- jekyll-last-modified-at
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -59,8 +78,7 @@ exclude:
 # theme settings
 # we're using no theme, but rather a custom theme now
 theme: ~ 
-minima:
-  date_format: "%F %T"
+date_format: "%F %T"
 
 # assets (jekyll-assets)
 

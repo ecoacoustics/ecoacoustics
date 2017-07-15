@@ -48,6 +48,9 @@ GEM
     jekyll-github-metadata (2.4.0)
       jekyll (~> 3.1)
       octokit (~> 4.0, != 4.4.0)
+    jekyll-last-modified-at (1.0.1)
+      jekyll (~> 3.3)
+      posix-spawn (~> 0.3.9)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
     jekyll-scholar (5.10.1)
@@ -72,10 +75,9 @@ GEM
       sawyer (~> 0.8.0, >= 0.5.3)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
+    posix-spawn (0.3.13)
     public_suffix (2.0.5)
     rack (1.6.8)
-    rack-livereload (0.3.16)
-      rack
     rails-assets-bulma (0.4.3)
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
@@ -106,9 +108,9 @@ DEPENDENCIES
   jekyll-assets
   jekyll-feed (~> 0.6)
   jekyll-github-metadata
+  jekyll-last-modified-at
   jekyll-scholar
   match_regex
-  rack-livereload
   rails-assets-bulma!
   replace_regex
   tzinfo-data

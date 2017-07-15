@@ -6,3 +6,16 @@
 //         @extend .is-#{$i};
 //     }
 // }
+
+$twitter-color: #55acee;
+$twitter-color-light: findColorInvert($twitter-color) !default;
+$github-color: #333;
+
+
+.github-icon {
+    color: $github-color;
+}
+
+.twitter-icon {
+    color: $twitter-color;
+}

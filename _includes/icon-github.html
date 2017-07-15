@@ -1,10 +1,12 @@
-<a href="https://github.com/{{ include.username }}">
-    <span class="icon">
+<a href="https://github.com/{{ include.username }}" class="{{ include.class }}">
+    <span class="icon github-icon">
 {% if include.alt %}
         <i class="fa fa-github-alt"></i>
 {% else %}
         <i class="fa fa-github"></i>
 {% endif %}
     </span>
+{% unless include.no_text %}
     <span class="username">{{ include.username }}</span>
+{% endunless %}
 </a>

@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Add a click event on each of them
     $navBurgers.forEach(function ($el) {
-      $el.addEventListener('click', () => {
+      $el.addEventListener('click', function() {
 
         // Get the target from the "data-target" attribute
         var target = $el.dataset.target;

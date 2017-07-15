@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Jekyll serve",
+            "type": "Ruby",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "program": "${workspaceRoot}/bin/jekyll",
+            "args": [
+                "serve",
+                "--watch"
+            ]
+        }
+    ]
+}

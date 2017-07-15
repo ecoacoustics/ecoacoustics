@@ -23,6 +23,7 @@ group :jekyll_plugins do
    gem "match_regex"
    gem "replace_regex"
    gem 'jekyll-github-metadata'
+   #gem 'jekyll-last-modified-at'
 end
 
 # add bulma css

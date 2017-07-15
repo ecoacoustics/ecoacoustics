@@ -8,5 +8,7 @@
         "_site": true,
         ".asset-cache": true,
         ".sass-cache": true
-    }
+    },
+    "html.format.endWithNewline": true,
+    "html.format.indentHandlebars": false
 }
