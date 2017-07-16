@@ -8,11 +8,11 @@ Jekyll::Hooks.register :site, :after_init do |post|
   return unless Jekyll.env == 'production'
 
   command = "git lfs pull https://github.com/ecoacoustics/ecoacoustics.git"
-  Jekyll.logger.info "Executing additional git lfs command: #{command}"
+  Jekyll.logger.warn "HACK: " "Executing additional git lfs command: #{command}"
 
   cmd command
 
-  Jekyll.logger.info "Executing additional git lfs command completed!"
+  Jekyll.logger.warn "HACK: " "Executing additional git lfs command completed!"
 end
 
 # Run a shell command
