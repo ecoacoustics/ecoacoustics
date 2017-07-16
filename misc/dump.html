@@ -1,7 +1,12 @@
 ---
-layout: default
+layout: page
+title: Testing page for debugging variables
 ---
-
+<div class="box" >
+<pre>
+{{ site.pages | where:"fragments","about" | exclude_map:"content" | pretty_json }}
+</pre>
+</div>
 
 <div class="box" >
 <pre>

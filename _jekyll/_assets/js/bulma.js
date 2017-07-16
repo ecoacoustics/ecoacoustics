@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
 
   // Get all "nav-burger" elements
-  var $navBurgers = Array.prototype.slice.call(document.querySelectorAll('.nav-burger'), 0);
+  var query = document.querySelectorAll('.navbar-burger');
+  var $navBurgers = Array.prototype.slice.call(query, 0);
 
   // Check if there are any nav burgers
   if ($navBurgers.length > 0) {

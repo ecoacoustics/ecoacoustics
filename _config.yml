@@ -47,10 +47,15 @@ collections:
 defaults: []
 
 # nav pages
-nav_pages:
-  -
 
 # Build settings
+plugins_dir:  _jekyll/_plugins
+layouts_dir:  _jekyll/_layouts
+data_dir:     _jekyll/_data
+includes_dir: _jekyll/_includes
+
+permalink: pretty
+
 markdown: kramdown
 
 scholar:
@@ -81,6 +86,16 @@ theme: ~
 date_format: "%F %T"
 
 # assets (jekyll-assets)
+assets:
+  sources:
+    - _jekyll/_assets/css
+    - _jekyll/_assets/images
+    - _jekyll/_assets/javascripts
+    - _jekyll/_assets/stylesheets
+    - _jekyll/_assets/fonts
+    - _jekyll/_assets/img
+    - _jekyll/_assets/js
+
 
 # our own handrolled vendor asset management
 # assumes all vendor assets come from the cloud

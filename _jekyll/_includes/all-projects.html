@@ -1,0 +1,11 @@
+{% for repo in site.github.public_repositories %}
+<div>
+    <ul>
+        <li>{{ repo.name }}</li>
+        <li>{{ repo.url }}</li>
+        <li>{{ repo.description }}</li>
+        <li>{{ repo.homepage }}</li>
+        <li>{{ repo.stargazers_count }}</li>
+    </ul>
+</div>
+{% endfor %}

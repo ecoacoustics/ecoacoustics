@@ -1,12 +1,3 @@
-
-// extend all headings with bulma styling by default
-// @for $i from 1 through 6 {
-//     h#{$i} {
-//         @extend .title;
-//         @extend .is-#{$i};
-//     }
-// }
-
 $twitter-color: #55acee;
 $twitter-color-light: findColorInvert($twitter-color) !default;
 $github-color: #333;

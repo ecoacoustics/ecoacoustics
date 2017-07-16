@@ -41,17 +41,18 @@
       </div>
 
       <div class="navbar-end">
-        {% assign end_items = site.pages | where:"header_page",true %}
-        {% for item in end_items  %}
-        {% if item.output -%}
+        {%- assign end_items = site.pages | where:"header_page",true -%}
+        {%- for item in end_items -%}
+        {% assign sub_items = site.pages | where:"fragments",item.fragments[0] %}
+        {% if sub_items -%}
         <div class="navbar-item hap-dropdown is-hoverable">
           <a class="navbar-link is-active" href="{{ item.permalink | default: item.url }}">
             {{ item.title | default: item.label }}
           </a>          
           <div class="navbar-dropdown">
-            {% for doc in item.docs %}
-            <a class="navbar-item" href="{{ doc.url }}">
-              {{ doc.title }}
+            {% for sub_item in sub_items %}
+            <a class="navbar-item" href="{{ sub_item.url }}">
+              {{ sub_item.title }}
             </a>
             {%- endfor %}
           </div>
@@ -61,7 +62,7 @@
           {{ item.title | default: item.label }}
         </a>  
         {%- endif %}
-        {% endfor %}
+        {%- endfor %}
       </div>
     </div>
   </nav>

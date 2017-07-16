@@ -4,6 +4,10 @@ Jekyll::Hooks.register [:pages, :documents, :posts], :pre_render do |meta, paylo
 
     fragments = meta.relative_path.split("/")
 
+    last = fragments[-1]
+    last = File.basename(last,File.extname(last))
+    fragments[-1] = last
+
     meta.data ||= {}
 
     meta.data['fragments'] = fragments

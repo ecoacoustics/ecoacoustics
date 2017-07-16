@@ -1,0 +1,30 @@
+
+// extend all headings with bulma styling by default
+// @for $i from 1 through 6 {
+//     h#{$i} {
+//         @extend .title;
+//         @extend .is-#{$i};
+//     }
+// }
+
+// hide the scrollbar unless needed (bulma sass has it on by default)
+html {
+    overflow-y: auto
+}
+
+// ensure body reaches full height by expanding the size of whatever 
+// is in the main element
+.body-full {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.body-full > * {
+    flex: none;
+}
+
+.body-full > main {
+    flex: 1;
+}
+
