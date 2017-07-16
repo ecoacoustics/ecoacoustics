@@ -22,7 +22,9 @@ description: >
 logo: /assets/logo.png
 
 # the subpath of your site, e.g. /blog
-baseurl: ""
+# this must be "/" (instead of "") unitl 
+# https://github.com/jekyll/github-metadata/pull/97 is fixed
+baseurl: /
 
 # the base hostname & protocol for your site, e.g. http://example.com
 url: "https://ecoacoustics.info"
