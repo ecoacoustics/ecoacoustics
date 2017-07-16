@@ -6,7 +6,7 @@
             "type": "Ruby",
             "request": "launch",
             "cwd": "${workspaceRoot}",
-            "program": "${workspaceRoot}/bin/jekyll",
+            "program": "${workspaceRoot}/_jekyll/jekyll",
             "args": [
                 "serve",
                 "--watch"

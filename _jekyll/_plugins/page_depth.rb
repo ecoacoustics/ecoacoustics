@@ -1,17 +1,28 @@
 
 # documents are collections, and collections include also posts
-Jekyll::Hooks.register [:pages, :documents, :posts], :pre_render do |meta, payload|
+Jekyll::Hooks.register [:site], :pre_render do |meta, payload|
 
-    fragments = meta.relative_path.split("/")
+    #puts meta.pages.inspect
+    #puts meta.documents.inspect
 
-    last = fragments[-1]
-    last = File.basename(last,File.extname(last))
-    fragments[-1] = last
+    meta.pages.each { |p| fragment(p) }
+    meta.documents.each { |p| fragment(p) }
+    
+end
 
-    meta.data ||= {}
+def fragment(obj) 
+    #puts "Processing #{obj.inspect}"
+    fragments = obj.url.split("/")
 
-    meta.data['fragments'] = fragments
+    #last = fragments[-1]
+    #last = File.basename(last,File.extname(last))
+    #fragments[-1] = last
 
-    # there's always an extra slash
-    meta.data['depth'] = fragments.length - 1
+    fragments = fragments.reject{ |x| x.empty? }
+
+    obj.data ||= {}
+
+    obj.data['fragments'] = fragments
+
+    obj.data['depth'] = fragments.length
 end

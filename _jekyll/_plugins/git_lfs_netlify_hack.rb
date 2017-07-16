@@ -5,14 +5,14 @@
 # This is an awkward attempt to patch that behaviour
 
 Jekyll::Hooks.register :site, :after_init do |post|
-  return unless Jekyll.env == 'production'
+  if Jekyll.env == 'production'
+    command = "git lfs pull https://github.com/ecoacoustics/ecoacoustics.git"
+    Jekyll.logger.warn "HACK: " "Executing additional git lfs command: #{command}"
 
-  command = "git lfs pull https://github.com/ecoacoustics/ecoacoustics.git"
-  Jekyll.logger.warn "HACK: " "Executing additional git lfs command: #{command}"
+    cmd command
 
-  cmd command
-
-  Jekyll.logger.warn "HACK: " "Executing additional git lfs command completed!"
+    Jekyll.logger.warn "HACK: " "Executing additional git lfs command completed!"
+  end
 end
 
 # Run a shell command

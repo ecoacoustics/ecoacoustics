@@ -6,6 +6,4 @@ header_page: true
 ---
 
 
-# Contributors
-
-
+# Goal
