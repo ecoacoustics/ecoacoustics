@@ -19,9 +19,12 @@
     <div id="navMenu" class="navbar-menu">
       <div class="navbar-start">
         {% for collection in site.collections %}
+        {% assign default_url = '/' | append: collection.label %}
+        {% assign collection_url = collection.permalink | default: default_url %}
         {% if collection.output -%}
         <div class="navbar-item hap-dropdown is-hoverable">
-          <a class="navbar-link is-active" href="{{ collection.url }}">
+          <a class="navbar-link is-active" 
+            href="{{ collection_url }}">
             {{ collection.title | default: collection.label }}
           </a>          
           <div class="navbar-dropdown">
@@ -33,7 +36,8 @@
           </div>
         </div>
         {%- else %}
-        <a class="navbar-item" href="{{ collection.url }}">
+        <a class="navbar-item" 
+          href="{{ collection_url }}">
           {{ collection.title | default: collection.label }}
         </a>  
         {%- endif %}

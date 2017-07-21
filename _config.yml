@@ -39,11 +39,16 @@ repository: ecoacoustics/ecoacoustics
 collections:
   groups:
     output: true
-  hardware: {}
-  software: {}
-  analysis: {}
-  deployment: {}
-  research: {}
+  hardware:
+    output: true
+  software:
+    output: true
+  analysis:
+    output: true
+  deployment:
+    output: true
+  research:
+    output: true
 
 # defaults
 defaults: []

@@ -1,6 +1,20 @@
 ---
 layout: container
 ---
-<article class="content">
+
+<article>
+    <ul>
+        {% for category in page.categories %}
+        <li>{{ category }}</li>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        {% for tag in page.tags %}
+        <li>{{ tag }}</li>
+        {% endfor %}
+    </ul>
+    <div class="content">
     {{ content }}
+    </div>
 </article>

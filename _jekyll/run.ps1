@@ -1,1 +1,1 @@
-ruby ./jekyll serve --watch
+ruby "$PSScriptRoot/jekyll" serve --watch
