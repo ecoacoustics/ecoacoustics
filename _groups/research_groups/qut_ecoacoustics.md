@@ -2,7 +2,7 @@
 layout: page
 title: QUT Ecoacoustics
 subtitle: acoustic sensing technology for monitoring the environment
-category: "Research group"
+category: "Research groups"
 tags:
   - ecoacoustics
   - bioacoustics

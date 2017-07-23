@@ -1,5 +1,6 @@
 ---
 layout: list
+title: Groups
 collection_name: groups
 ---
 

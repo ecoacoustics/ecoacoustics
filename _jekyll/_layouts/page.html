@@ -3,17 +3,27 @@ layout: container
 ---
 
 <article>
-    <ul>
-        {% for category in page.categories %}
-        <li>{{ category }}</li>
-        {% endfor %}
-    </ul>
+    <div class="level">
+        <div class="level-left">
+            <div class="level-item">
+                <ul class="is-inline">
+                    {% for category in page.categories %}
+                    <li><span class="tag is-primary">{{ category }}</span></li>
+                    {% endfor %}
+                </ul>
+            </div>
 
-    <ul>
-        {% for tag in page.tags %}
-        <li>{{ tag }}</li>
-        {% endfor %}
-    </ul>
+        </div>
+        <div class="level-right">
+            <div class="level-item">
+                <ul class="is-inline">
+                    {% for tag in page.tags %}
+                    <li><span class="tag is-dark">{{ tag }}</span></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
     <div class="content">
     {{ content }}
     </div>

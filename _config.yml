@@ -39,6 +39,7 @@ repository: ecoacoustics/ecoacoustics
 collections:
   groups:
     output: true
+    group_by_category: true
   hardware:
     output: true
   software:
@@ -53,7 +54,6 @@ collections:
 # defaults
 defaults: []
 
-# nav pages
 
 # Build settings
 plugins_dir:  _jekyll/_plugins
@@ -91,6 +91,12 @@ exclude:
 # we're using no theme, but rather a custom theme now
 theme: ~ 
 date_format: "%F %T"
+
+# breadcrumbs
+breadcrumbs:
+  root:
+    hide: false  # show breadcrumbs on root/home page
+    image: false # Show image or title text
 
 # assets (jekyll-assets)
 assets:

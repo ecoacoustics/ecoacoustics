@@ -21,17 +21,27 @@
         {% for collection in site.collections %}
         {% assign default_url = '/' | append: collection.label %}
         {% assign collection_url = collection.permalink | default: default_url %}
-        {% if collection.output -%}
-        <div class="navbar-item hap-dropdown is-hoverable">
+        {% assign docs_length = collection.docs | size  %}
+        {% if collection.output and docs_length > 0 -%}
+        <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link is-active" 
             href="{{ collection_url }}">
             {{ collection.title | default: collection.label }}
           </a>          
           <div class="navbar-dropdown">
-            {% for doc in collection.docs %}
+            {% assign doc_groups = collection.docs | group_by: "category"  %}
+            {% for doc_group in doc_groups %}
+            <div class="navbar-item label">
+              <p>{{ doc_group.name }}</p>
+            </div>
+            {% for doc in doc_group.items %}
             <a class="navbar-item" href="{{ doc.url }}">
               {{ doc.title }}
             </a>
+            {%- endfor %}
+            {% if forloop.last == false %}
+            <hr class="navbar-divider" />
+            {% endif %}
             {%- endfor %}
           </div>
         </div>

@@ -1,0 +1,25 @@
+{% comment %}
+https://github.com/git-no/jekyll-breadcrumbs/blob/1f10f08242454a15aa2ff87f200d74327e5d0a8a/source/_includes/nav-breadcrumbs.html
+{% endcomment %}
+
+
+<nav class="breadcrumb is-small"
+{%- if page.url == '/' and site.breadcrumbs.root.hide %}{{ 'style="display: none;"' }}{% endif %}>
+  <ol class="" vocab="http://schema.org/" typeof="BreadcrumbList">
+    {% assign position = 0 %}
+    {% for crumbitem in breadcrumbs %}
+      {% assign position = position  | plus: 1 %}
+
+      {% if forloop.first and site.breadcrumbs.root.image %}
+        {% include icon.html class="breadcrumb-item" color=include.color %}
+        {% continue %}
+      {% endif %}
+
+      <li property="itemListElement" typeof="ListItem"
+        class="{% if forloop.last %}is-active{% endif %}">
+          <a property="item" typeof="WebPage" href="{{ crumbitem.url | rekative_url }}"><span property="name">{{ crumbitem.title }}</span><meta property="position" content="{{ position }}" /></a>
+      </li>
+    {% endfor %}
+
+  </ol>
+</nav>

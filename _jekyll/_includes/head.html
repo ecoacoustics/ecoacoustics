@@ -6,7 +6,7 @@
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <meta name="{{ page.last_modified_at | date: site.date_format }}" />
-  <link rel="icon" type="image/png" href="/favico.png" />
+  <link rel="icon" type="image/png" href="/assets/favico.png" />
 
   <!-- {{jekyll.environment}} -->
   {% for asset in site.vendor_assets %}

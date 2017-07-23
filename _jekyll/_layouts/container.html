@@ -16,5 +16,20 @@ layout: default
   </div>
 </section>
 <main class="container" aria-label="Content">
-        {{ content }}
+ 
+  <div class="level">
+    <div class="level-left">
+        <div class="level-item">
+ {% include nav-breadcrumbs.html %}
+        </div>
+    </div>
+    <div class="level-right">
+        <p class="level-item"><a href="{{ (site.pages | where:'title','help').url }}">Help</a></p>
+        <p class="level-item">
+            {% include edit_button.html %}
+        </p>
+    </div>
+</div>
+
+  {{ content }}
 </main>

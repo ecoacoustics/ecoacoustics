@@ -1,7 +1,7 @@
 ---
 layout: page
 title: International Society of Ecoacoustics
-category: "Society"
+category: "Societies"
 ---
 
 # test group 2

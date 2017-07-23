@@ -1,0 +1,11 @@
+<a class="button is-success is-small" 
+  href="{{ site.github.repository_url }}/blob/master/{{ page.relative_path | default: page.path }}">
+    <span class="icon is-small">
+{% if include.alt %}
+    <i class="fa fa-pencil-square"></i>
+{% else %}
+    <i class="fa fa-pencil"></i>
+{% endif %}
+    </span>&nbsp;
+    Edit
+</a>
