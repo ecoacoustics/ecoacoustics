@@ -13,7 +13,7 @@ layout: container
     <div>
       
       <span class="">
-          {{ item.date | date: date_format | default: "no date" }}</span>
+          {{ item.date | date: site.date_format | default: "no date" }}</span>
 
       <h2>
         <a class="" href="{{ item.url | relative_url }}">

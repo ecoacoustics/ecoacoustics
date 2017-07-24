@@ -81,6 +81,7 @@ plugins:
   - jekyll-assets
   - jekyll-github-metadata
   #- jekyll-last-modified-at
+  - jekyll-git_metadata
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -90,7 +91,8 @@ exclude:
 # theme settings
 # we're using no theme, but rather a custom theme now
 theme: ~ 
-date_format: "%F %T"
+date_format: "%F %T %:z"
+time_format: "%FT%T:z"
 
 # breadcrumbs
 breadcrumbs:

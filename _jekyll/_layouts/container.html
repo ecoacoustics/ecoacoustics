@@ -4,7 +4,7 @@ layout: default
 <section class="hero is-primary is-bold ">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title">
+      <h1 id="{{ page.title | slugify }}" class="title">
         {{ page.title | escape }}
       </h1>
       {% if page.subtitle %}
@@ -17,19 +17,45 @@ layout: default
 </section>
 <main class="container" aria-label="Content">
  
-  <div class="level">
-    <div class="level-left">
-        <div class="level-item">
+  <div class="columns">
+    <div class="column">
  {% include nav-breadcrumbs.html %}
-        </div>
     </div>
-    <div class="level-right">
-        <p class="level-item"><a href="/help">Help</a></p>
-        <p class="level-item">
-            {% include edit_button.html %}
+    <div class="column">
+      Last edited by {{ page.git.last_commit.author_name}} on {{ page.git.last_commit.commit_date | date: site.date_format }}
+    </div>
+    <div class="column is-narrow">
+      <div class="field is-grouped">
+        <p class="control">
+          <a class="button is-small">History</a>
         </p>
+        <p class="control">
+          <a class="button is-small is-info is-outlined" href="/help">Help</a>
+        </p>
+        <p class="control">
+          {% include edit_button.html %}          
+        </p>
+      </div>
     </div>
-</div>
+  </div>
+
+  <div class="panel">
+    <p class="panel-heading">
+      Information
+    </p>
+    <div class="panel-block">
+      Edits: {{ page.git.total_commits}}
+    </div>
+    <div class="panel-block">
+      Additions: {{ page.git.total_additions }} Deletions: {{ page.git.total_subtractions }}
+    </div>
+    <div class="panel-block">
+      Created date: {{ page.git.first_commit.commit_date | date:site.date_format }}
+    </div>
+    <div class="panel-block">
+      Created by: {{ page.git.first_commit.author_name | date:site.date_format }}
+    </div>
+  </div>
 
   {{ content }}
 </main>

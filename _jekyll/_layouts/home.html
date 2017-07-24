@@ -22,8 +22,7 @@ layout: default
   <ul class="">
     {% for post in site.posts %}
     <li>
-      {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
-      <span class="">{{ post.date | date: date_format }}</span>
+      <span class="">{{ post.date | date: site.date_format }}</span>
 
       <h2>
         <a class="" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>

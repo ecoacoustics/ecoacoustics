@@ -5,7 +5,7 @@
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  <meta name="{{ page.last_modified_at | date: site.date_format }}" />
+  <meta name="last-modified" content="{{ page.git.last_commit.commit_date | date: site.date_format }}" />
   <link rel="icon" type="image/png" href="/assets/favico.png" />
 
   <!-- {{jekyll.environment}} -->

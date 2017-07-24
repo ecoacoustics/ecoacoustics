@@ -40,3 +40,5 @@
 _site/
 .jekyll-metadata
 .asset-cache
+
+.git-metadata

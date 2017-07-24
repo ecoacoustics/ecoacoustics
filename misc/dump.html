@@ -4,7 +4,7 @@ title: Testing page for debugging variables
 ---
 <div class="box" >
 <pre>
-{{ site.pages | where:"fragments","groups" | exclude_map:"content" | pretty_json }}
+{{ page.git | pretty_json  }}
 </pre>
 </div>
 
@@ -16,6 +16,16 @@ title: Testing page for debugging variables
 <div class="box" >
 <pre>
 {{ site.pages | exclude_map:"content" | pretty_json }}
+</pre>
+</div>
+<div class="box" >
+<pre>
+ {{ page.git | pretty_json  }}
+</pre>
+</div>
+<div class="box" >
+<pre>
+ {{ site.git | pretty_json  }}
 </pre>
 </div>
 <div class="box" >
