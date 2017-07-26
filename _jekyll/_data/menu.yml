@@ -1,0 +1,25 @@
+
+analysis:
+  title: analysis
+  collections: []
+deployment:
+  title: deployment
+  collections: []
+groups:
+  title: groupss
+  collections:
+    - research_groups
+    - societies
+posts:
+  title: posts
+  collections: []
+research:
+  title: research
+  collections:
+    - literature
+    - publications
+software:
+  title: software
+  collections: []
+
+    

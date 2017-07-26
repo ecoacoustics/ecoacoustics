@@ -37,9 +37,12 @@ repository: ecoacoustics/ecoacoustics
 
 # collections
 collections:
-  groups:
+  research_groups:
     output: true
-    group_by_category: true
+    title: "Research Groups"
+  societies:
+    output: true
+    title: "Societies"
   hardware:
     output: true
   software:
@@ -48,11 +51,16 @@ collections:
     output: true
   deployment:
     output: true
-  research:
+  literature:
     output: true
+    title: "Literature"
+  publications:
+    output: true
+    title: "Publications"
 
 # defaults
 defaults: []
+
 
 
 # Build settings
