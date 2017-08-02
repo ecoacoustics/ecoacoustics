@@ -1,8 +1,10 @@
-<header role="banner">
+<header class="container" role="banner">
   <nav class="navbar ">
-    <div class="navbar-brand">
+    <div class="navbar-brand header-brand-no-shrink-hack">
       <a class="navbar-item" href="{{ site.url }}">
-        <img src="{{ site.logo }}" alt="{{ site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+        <img src="{{ site.logo }}" 
+          alt="{{ site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}"
+          width="32" height="32">
       </a>
       {% include icon-github.html username=site.repository no_text=true class="navbar-item is-hidden-desktop" %}
       {% if site.twitter_username %} {% include icon-twitter.html username=site.twitter_username no_text=true class="navbar-item is-hidden-desktop" %} {% endif %}
@@ -36,16 +38,19 @@
             {%- unless collection %}
             {%- continue %}
             {%- endunless %}
-            {%- assign collection_url = collection.permalink %}
-            <div class="navbar-item label">
-              <p>{{ collection.title | default: collection.category }}</p>
-            </div>
+            {%- assign collection_url =  '/' | append: collection.label %}
+            <a class="navbar-item label" href="{{ collection_url }}">
+              {{ collection.title | default: collection.category }}
+            </a>
             {% assign docs_length = collection.docs | size  %}
             {% for doc in collection.docs %}
             <a class="navbar-item" href="{{ doc.url }}">
-              {{ doc.title }}
+              {{ doc.title | escape }}
             </a>
             {%- endfor %}
+            {% if docs_length == 0 %}
+            {% include navbar-new-item.html %}
+            {% endif %}
             {% if forloop.last == false %}
             <hr class="navbar-divider" />
             {% endif %}
@@ -55,7 +60,7 @@
         {%- else %}
         <a class="navbar-item" 
             href="{{ value.url | default: default_url }}" >
-            {{ value.title | default: key }}
+            {{ value.title | default: key | escape }}
         </a>
         {%- endif %}          
         {% endfor %}
@@ -66,21 +71,21 @@
         {%- for item in end_items -%}
         {% assign sub_items = site.pages | where:"fragments",item.fragments[0] %}
         {% if sub_items -%}
-        <div class="navbar-item hap-dropdown is-hoverable">
+        <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link is-active" href="{{ item.permalink | default: item.url }}">
-            {{ item.title | default: item.label }}
+            {{ item.title | default: item.label | escape }}
           </a>          
           <div class="navbar-dropdown">
             {% for sub_item in sub_items %}
             <a class="navbar-item" href="{{ sub_item.url }}">
-              {{ sub_item.title }}
+              {{ sub_item.title | escape }}
             </a>
             {%- endfor %}
           </div>
         </div>
         {%- else %}
         <a class="navbar-item" href="{{ item.permalink | default: item.url }}" >
-          {{ item.title | default: item.label }}
+          {{ item.title | default: item.label | escape }}
         </a>  
         {%- endif %}
         {%- endfor %}

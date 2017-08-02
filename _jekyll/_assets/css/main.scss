@@ -9,9 +9,33 @@
 
 // overide bulma vars
 
-
 // import the rest of bulma
-@import "app/assets/stylesheets/bulma";
+
+/* TEMPORARY WORKAROUND for https://github.com/jgthms/bulma/issues/964
+ * Need 0.5.1 of bulma to be released
+ */
+//@import "app/assets/stylesheets/bulma";
+
+@import "app/assets/stylesheets/bulma/sass/utilities/_all";
+@import "app/assets/stylesheets/bulma/sass/base/_all";
+@import "app/assets/stylesheets/bulma/sass/elements/_all";
+@import "app/assets/stylesheets/bulma/sass/components/breadcrumb.sass";
+@import "app/assets/stylesheets/bulma/sass/components/card.sass";
+@import "app/assets/stylesheets/bulma/sass/components/dropdown.sass";
+@import "app/assets/stylesheets/bulma/sass/components/level.sass";
+@import "app/assets/stylesheets/bulma/sass/components/media.sass";
+@import "app/assets/stylesheets/bulma/sass/components/menu.sass";
+@import "app/assets/stylesheets/bulma/sass/components/message.sass";
+@import "app/assets/stylesheets/bulma/sass/components/modal.sass";
+@import "app/assets/stylesheets/bulma/sass/components/nav.sass";
+@import "app/assets/stylesheets/bulma/sass/components/navbar.sass";
+@import "app/assets/stylesheets/bulma/sass/components/pagination.sass";
+@import "app/assets/stylesheets/bulma/sass/components/panel.sass";
+//@import "app/assets/stylesheets/bulma/sass/components/tabs.sass"; <-- everything except for tabs!
+@import "app/assets/stylesheets/bulma/sass/grid/_all";
+@import "app/assets/stylesheets/bulma/sass/layout/_all";
+
+/* End hack */
 
 // continute building
 @import "custom/base";

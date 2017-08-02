@@ -58,4 +58,17 @@ layout: default
   </div>
 
   {{ content }}
+
+  {% bibliography --cited_in_order %}
+
+  {% capture about_me %}
+  I am {{ age }} and my favorite food is {{ favorite_food }}.
+  {% endcapture %}
+
+  {% if true %}
+  <footer class="content">
+    <h1>Bibliography</h1>
+    {{ bibliography_text }}
+  </footer>
+  {% endif %}
 </main>

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Contributing
+subtitle: Help
 ---
 
 # Contributing

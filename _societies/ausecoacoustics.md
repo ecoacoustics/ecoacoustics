@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Ausecoacoustics
-category: "Societies"
+categories: "Societies"
 tags:
     - ecoacoustics
     - society

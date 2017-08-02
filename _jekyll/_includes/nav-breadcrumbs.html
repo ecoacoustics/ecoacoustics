@@ -17,7 +17,9 @@ https://github.com/git-no/jekyll-breadcrumbs/blob/1f10f08242454a15aa2ff87f200d74
 
       <li property="itemListElement" typeof="ListItem"
         class="{% if forloop.last %}is-active{% endif %}">
-          <a property="item" typeof="WebPage" href="{{ crumbitem.url | rekative_url }}"><span property="name">{{ crumbitem.title }}</span><meta property="position" content="{{ position }}" /></a>
+          <a property="item" typeof="WebPage" href="{{ crumbitem.url | rekative_url }}">
+            <span property="name">{{ crumbitem.title | escape }}</span>
+            <meta property="position" content="{{ position }}" /></a>
       </li>
     {% endfor %}
 

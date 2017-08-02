@@ -6,21 +6,21 @@ layout: container
     <div class="level">
         <div class="level-left">
             <div class="level-item">
-                <ul class="is-inline">
+                <div class="tags">
                     {% for category in page.categories %}
-                    <li><span class="tag is-primary">{{ category }}</span></li>
+                    <span class="tag is-primary">{{ category | escape }}</span>
                     {% endfor %}
-                </ul>
+                </div>
             </div>
 
         </div>
         <div class="level-right">
             <div class="level-item">
-                <ul class="is-inline">
+                <div class="tags">
                     {% for tag in page.tags %}
-                    <li><span class="tag is-dark">{{ tag }}</span></li>
+                    <span class="tag is-dark">{{ tag | escape }}</span>
                     {% endfor %}
-                </ul>
+                </div>
             </div>
         </div>
     </div>

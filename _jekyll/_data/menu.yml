@@ -1,18 +1,27 @@
 
 analysis:
   title: analysis
-  collections: []
+  collections:
+    - sound_analysis
+    - indices
+    - recognisers
 deployment:
   title: deployment
-  collections: []
+  collections:
+    - deployment
+hardware:
+  title: hardware
+  collections:
+    - hardware
 groups:
-  title: groupss
+  title: groups
   collections:
     - research_groups
     - societies
 posts:
   title: posts
-  collections: []
+  collections:
+    - posts
 research:
   title: research
   collections:
@@ -20,6 +29,7 @@ research:
     - publications
 software:
   title: software
-  collections: []
+  collections:
+    - software
 
     

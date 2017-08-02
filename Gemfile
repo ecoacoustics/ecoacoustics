@@ -18,7 +18,7 @@ group :jekyll_plugins do
    gem "jekyll-assets"
    gem "match_regex"
    gem "replace_regex"
-   gem 'jekyll-github-metadata'
+   gem 'jekyll-github-metadata', "~> 2.5.1"
    #gem 'jekyll-last-modified-at'
    gem 'jekyll-git_metadata'
 end

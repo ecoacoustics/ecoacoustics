@@ -20,17 +20,25 @@ html {
     flex-direction: column;
 }
 
-.body-full > * {
+.body-full > section,.body-full > header {
     flex: none;
+    width: 100%
 }
 
 .body-full > main {
     flex: 1;
+    width: 100%
+}
+
+.header-brand-no-shrink-hack {
+    flex-shrink: 0;
 }
 
 .is-inline > li {
      display: inline;
 }
+
+
 
 // div.navbar-item.label {
 

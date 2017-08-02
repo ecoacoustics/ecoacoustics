@@ -1,0 +1,7 @@
+{%- if include.option == 'edit' -%}
+{{ site.github.repository_url }}/edit/master/{{ page.relative_path | default: page.path }}
+{%- elsif include.option == 'raw' -%}
+{{ site.github.repository_url }}/raw/master/{{ page.relative_path | default: page.path }}
+{%- else -%}
+{{ site.github.repository_url }}/blob/master/{{ page.relative_path | default: page.path }}
+{%- endif -%}

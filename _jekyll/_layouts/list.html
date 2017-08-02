@@ -3,32 +3,29 @@ layout: container
 ---
 
 <article>
-        <div class="content">
+    <div class="content">
     {{ content }}
     </div>
-   {% assign collection = site[page.collection_name] %}
-
+    {% for collection_name in page.collection_names %}
+    {%- assign collection = site.collections | where:"label",collection_name | first %}
     <div>
-   {% for item in collection %}
+    {% for item in collection %}
     <div>
-      
-      <span class="">
-          {{ item.date | date: site.date_format | default: "no date" }}</span>
+        <span class="">
+            {{ item.date | date: site.date_format | default: "no date" }}
+        </span>
 
-      <h2>
+        <h2>
         <a class="" href="{{ item.url | relative_url }}">
             {{ item.title | escape }}
         </a>
 
-      </h2>
-      <p>
-          {{ item.excerpt }}
-      </p>
+        </h2>
+        <p>
+            {{ item.excerpt }}
+        </p>
     </div>
     {% endfor %}
-
-
     </div>
-    
-
+    {% endfor %}
 </article>

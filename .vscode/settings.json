@@ -10,5 +10,9 @@
         ".sass-cache": true
     },
     "html.format.endWithNewline": true,
-    "html.format.indentHandlebars": false
+    "html.format.indentHandlebars": false,
+    "editor.rulers": [
+        80,
+        120
+    ]
 }

@@ -19,19 +19,17 @@ description: >
   A community governed, curated, open source, collection of information 
   for all things related to ecoacoustics, soundscapes, and bioacoustics.
   Join us in adding new content!
-logo: /assets/logo.png
+logo: /assets/favico.png
 
 # the subpath of your site, e.g. /blog
-# this must be "/" (instead of "") unitl 
-# https://github.com/jekyll/github-metadata/pull/97 is fixed
-baseurl: /
+baseurl: ""
 
 # the base hostname & protocol for your site, e.g. http://example.com
 url: "https://ecoacoustics.info"
 
 # integrations
-google_analytics: UA-NNNNNNNN-N
-twitter_username: atruskie
+google_analytics: #UA-NNNNNNNN-N
+twitter_username: # e.g. atruskie
 github_username: ecoacoustics
 repository: ecoacoustics/ecoacoustics
 
@@ -45,18 +43,32 @@ collections:
     title: "Societies"
   hardware:
     output: true
-  software:
+  software_packages:
     output: true
-  analysis:
+  applications:
     output: true
   deployment:
     output: true
+    title: "Deployment"
   literature:
     output: true
     title: "Literature"
   publications:
     output: true
     title: "Publications"
+  sound_analysis:
+    output: true
+    title: Analysis Techniques
+  indices:
+    output: true
+    title: Indices
+  recognisers:
+    output: true
+    title: Recognisers
+  posts:
+    output: true
+    title: Blog Posts
+
 
 # defaults
 defaults: []

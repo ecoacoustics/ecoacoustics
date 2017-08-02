@@ -1,5 +1,5 @@
 <a class="button is-success is-small is-outlined" 
-  href="{{ site.github.repository_url }}/blob/master/{{ page.relative_path | default: page.path }}">
+  href="{% include this-page-in-gh.html option='edit' %}">
     <span class="icon is-small">
 {% if include.alt %}
     <i class="fa fa-pencil-square"></i>
