@@ -4,7 +4,8 @@
 
 Styles obtained manually from: https://github.com/citation-style-language/styles/blob/master/apa.csl
 
-You can edit which style is used by changing the
+You can edit which style is used by changing the `scholar.style` 
+setting in the `config.yml`.
 
 # References
 
@@ -14,6 +15,8 @@ Again we're keeping this manually synchonized at the moment:
 
 1. Download and install Mendeley desktop
 1. Open the Mendeley shared library _Ecoaocustics.info_
+1. Go to the _Documents_ tab, and select all the documents (The key shortcut
+  <kbd>Ctrl+A</kbd> will select all).
 1. Use the _File > Export_ menu option and save the result to references.bib
 
 ## Automatic export notes

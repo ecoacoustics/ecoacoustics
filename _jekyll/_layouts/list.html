@@ -2,30 +2,30 @@
 layout: container
 ---
 
-<article>
-    <div class="content">
-    {{ content }}
-    </div>
-    {% for collection_name in page.collection_names %}
-    {%- assign collection = site.collections | where:"label",collection_name | first %}
-    <div>
-    {% for item in collection %}
-    <div>
-        <span class="">
-            {{ item.date | date: site.date_format | default: "no date" }}
-        </span>
 
-        <h2>
-        <a class="" href="{{ item.url | relative_url }}">
-            {{ item.title | escape }}
-        </a>
+<div class="content">
+{{ content }}
+</div>
+{% for collection_name in page.collection_names %}
+{%- assign collection = site.collections | where:"label",collection_name | first %}
+<div>
+{% for item in collection %}
+<div>
+    <span class="">
+        {{ item.date | date: site.date_format | default: "no date" }}
+    </span>
 
-        </h2>
-        <p>
-            {{ item.excerpt }}
-        </p>
-    </div>
-    {% endfor %}
-    </div>
-    {% endfor %}
-</article>
+    <h2>
+    <a class="" href="{{ item.url | relative_url }}">
+        {{ item.title | escape }}
+    </a>
+
+    </h2>
+    <p>
+        {{ item.excerpt }}
+    </p>
+</div>
+{% endfor %}
+</div>
+{% endfor %}
+

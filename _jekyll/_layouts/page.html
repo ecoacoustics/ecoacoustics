@@ -2,29 +2,29 @@
 layout: container
 ---
 
-<article>
-    <div class="level">
-        <div class="level-left">
-            <div class="level-item">
-                <div class="tags">
-                    {% for category in page.categories %}
-                    <span class="tag is-primary">{{ category | escape }}</span>
-                    {% endfor %}
-                </div>
-            </div>
 
+<div class="level">
+    <div class="level-left">
+        <div class="level-item">
+            <div class="tags">
+                {% for category in page.categories %}
+                <span class="tag is-primary">{{ category | escape }}</span>
+                {% endfor %}
+            </div>
         </div>
-        <div class="level-right">
-            <div class="level-item">
-                <div class="tags">
-                    {% for tag in page.tags %}
-                    <span class="tag is-dark">{{ tag | escape }}</span>
-                    {% endfor %}
-                </div>
+
+    </div>
+    <div class="level-right">
+        <div class="level-item">
+            <div class="tags">
+                {% for tag in page.tags %}
+                <span class="tag is-dark">{{ tag | escape }}</span>
+                {% endfor %}
             </div>
         </div>
     </div>
-    <div class="content">
-    {{ content }}
-    </div>
-</article>
+</div>
+<div class="content">
+{{ content }}
+</div>
+

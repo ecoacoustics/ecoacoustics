@@ -1,9 +1,8 @@
 ---
-layout: page
-title: Editing in MarkDown
+layout: raw_page
+title: Editing in Markdown
 subtitle: help
 ---
-
 *[HTML]: Hyper Text Markup Language
 
 # What is Markdown
@@ -14,21 +13,16 @@ Word documents) can not be easily shared, versioned, or adapted for the web.
 Markdown is the defacto text format for most websites today--you've probably
 used it before!
 
-The following page can be seen in it's raw format, that is, what _you_ a a user
-would type [here]({% include this-page-in-gh.html option='raw' %}).
+The following page can be seen in it's raw format, that is, what _you_ as a user
+would type [here]({% include this-page-in-gh.html option='raw' %}). We've also 
+set this page up so you can see the Markdown used to generate this page in the 
+right hand colum.
 
 # Markdown features
 
 ## Headings
 
-```
-# Level 1 Heading
-## Level 2 Heading
-### Level 3 Heading
-#### Level 4 Heading
-##### Level 5 Heading
-###### Level 6 Heading
-```
+Headings are defined with hashes, like so:
 
 # Level 1 Heading
 ## Level 2 Heading
@@ -36,6 +30,13 @@ would type [here]({% include this-page-in-gh.html option='raw' %}).
 #### Level 4 Heading
 ##### Level 5 Heading
 ###### Level 6 Heading
+
+
+
+
+
+
+
 
 ## Inside a paragraph
 
@@ -48,14 +49,13 @@ quote marks: "'hello'".
 
 Footnotes[^1] are added with `[^1]` notation; you then must define your footnote
 (usually the next paragraph is fine it will get automatically moved to the
-bottom of the page later.
+bottom of the page later).
 
 [^1]: The definition of the footnote!
 
 Abbreviations, such as HTML, work similarily to footnotes. Once defined all
 words that match the abbreviation will get transformed. We typically define all
 abbreviations at the top of the page.
-
 
 Unfortunately, things like super^script, sub_script are known not to work.
 
@@ -83,9 +83,12 @@ term
 another term
 : another meaning
 
+
+
 ## Horizontal rule
 
 --- 
+
 
 ## Tables
 
@@ -97,6 +100,11 @@ another term
 | cell4   | cell5   | cell6   |
 |=====
 | Foot1   | Foot2   | Foot3   |
+
+
+
+
+
 
 ## Code
 
@@ -115,7 +123,9 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
+
 ```r
+# An example of some R code
 > # We can use the print() function
 > print("Hello World!")
 [1] "Hello World!"
@@ -129,6 +139,9 @@ print_hi('Tom')
 [1] "How are you?"
 ```
  
+
+
+
 # Citations
 
 Citations are not a normal part of Markdown. This website uses a special
@@ -143,6 +156,8 @@ We can also add a quote block for a publication and then cite their work.
 Any citations you use must be added to the website's references file.
 All citations used on a page will be automatically included in the page
 bibliography.
+
+
 
 # Math
 
@@ -161,6 +176,3 @@ $$a^2 + b^2 = c^2$$
 $$ \mathsf{Data = PCs} \times \mathsf{Loadings} $$
 
 $$ \mathbf{X}_{n,p} = \mathbf{A}_{n,k} \mathbf{B}_{k,p} $$
-
-
-
