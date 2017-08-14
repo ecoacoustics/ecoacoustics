@@ -14,9 +14,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Ecoacoustics.info
+subtitle: Community created ecoacoustics knowledgebase
 author: the ecoacoustics community
 description: >
-  A community governed, curated, open source, collection of information 
+  A community governed, curated, open source, knowledgebase 
   for all things related to ecoacoustics, soundscapes, and bioacoustics.
   Join us in adding new content!
 logo: /assets/favico.png

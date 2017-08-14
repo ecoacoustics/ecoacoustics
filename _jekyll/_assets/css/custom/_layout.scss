@@ -43,3 +43,12 @@ html {
 // div.navbar-item.label {
 
 // }
+
+.breadcrumb li:first-child a {
+    // override bulma default to make left edge of breadcrumbs align with content
+    padding-left: 0;
+}
+
+.panel.is-small {
+    font-size: 75%;
+}

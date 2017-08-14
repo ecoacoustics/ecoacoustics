@@ -2,29 +2,64 @@
 layout: container
 ---
 
-
-<div class="level">
-    <div class="level-left">
-        <div class="level-item">
-            <div class="tags">
-                {% for category in page.categories %}
-                <span class="tag is-primary">{{ category | escape }}</span>
-                {% endfor %}
-            </div>
-        </div>
-
+<div class="columns">
+    <div class="column content">  
+        {{ content }}
     </div>
-    <div class="level-right">
-        <div class="level-item">
-            <div class="tags">
-                {% for tag in page.tags %}
-                <span class="tag is-dark">{{ tag | escape }}</span>
+    <div class="column is-narrow">
+        <div class="panel is-small">
+            <p class="panel-heading">
+                Page Metadata
+            </p>
+            <div class="panel-block">
+                Contributions: {{ page.git.total_commits}}
+            </div>
+            <div class="panel-block">
+                Contributors: {{ page.git.authors | map:'email' | unqiue | size }}
+            </div>
+            <div class="panel-block">
+                Additions: {{ page.git.total_additions }},
+                Deletions: {{ page.git.total_subtractions }}
+            </div>
+
+            <div class="panel-block">
+                Created by: {% include page-commit-link.html commit='first' %}
+            </div>
+            <div class="panel-block">
+                Last edited by {% include page-commit-link.html commit='last' %}
+            </div>
+            <div class="panel-block">
+                <p>
+                    All contributors:
+                </p>
+                <div>
+                {% assign authors = page.git.authors | group_by: 'email' %}
+                <ol>
+                {% for author in authors %}
+                <li>
+                    <span class="gh-author">{{ author.items[0].name }}</span>
+                    <span class="tag is-info is-rounded">
+                        {{ author.items | map: 'commits' | sum }}
+                    </span>
+                </li>
                 {% endfor %}
+                </ol>
+                </div>
+            </div>
+            <div class="panel-block">
+                <div class="tags">
+                    {% for category in page.categories %}
+                    <span class="tag is-primary">{{ category | escape }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="panel-block">
+                <div class="tags">
+                    {% for tag in page.tags %}
+                    <span class="tag is-dark">{{ tag | escape }}</span>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
 </div>
-<div class="content">
-{{ content }}
-</div>
-

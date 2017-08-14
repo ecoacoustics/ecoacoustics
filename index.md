@@ -4,4 +4,7 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
 title: Ecoacoustics.info
+subtitle: Community created ecoacoustics knowledgebase
 ---
+
+Welcome!!

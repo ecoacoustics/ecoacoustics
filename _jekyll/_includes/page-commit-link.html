@@ -1,0 +1,13 @@
+{% if include.commit == 'first' %}
+{% assign commit_data = page.git.first_commit %}
+{% elsif include.commit == 'last' %}
+{% assign commit_data = page.git.last_commit %}
+{% endif %}
+<span class="gh-author">
+        {{ page.git.last_commit.author_name}}
+</span>on
+<a href="{% include this-page-in-gh.html commit=commit_data.long_sha %}">
+    <span>
+        {{ page.git.last_commit.commit_date | date: site.date_format }}
+    </span>
+</a>

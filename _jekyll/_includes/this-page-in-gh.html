@@ -1,7 +1,11 @@
+{%- assign commitish = include.commit | default:'master' -%}
+{%- assign path = page.relative_path | default: page.path -%}
 {%- if include.option == 'edit' -%}
-{{ site.github.repository_url }}/edit/master/{{ page.relative_path | default: page.path }}
+{{ site.github.repository_url }}/edit/{{ commitish }}/{{ path }}
+{%- elsif include.option == 'history' -%}
+{{ site.github.repository_url }}/commits/{{ commitish }}/{{ path }}
 {%- elsif include.option == 'raw' -%}
-{{ site.github.repository_url }}/raw/master/{{ page.relative_path | default: page.path }}
+{{ site.github.repository_url }}/raw/{{ commitish }}/{{ path }}
 {%- else -%}
-{{ site.github.repository_url }}/blob/master/{{ page.relative_path | default: page.path }}
+{{ site.github.repository_url }}/blob/{{ commitish }}/{{ path }}
 {%- endif -%}

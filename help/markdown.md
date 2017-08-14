@@ -13,10 +13,8 @@ Word documents) can not be easily shared, versioned, or adapted for the web.
 Markdown is the defacto text format for most websites today--you've probably
 used it before!
 
-The following page can be seen in it's raw format, that is, what _you_ as a user
-would type [here]({% include this-page-in-gh.html option='raw' %}). We've also 
-set this page up so you can see the Markdown used to generate this page in the 
-right hand colum.
+**This page is special**. On the right is this page's raw text, that is, what _you_ 
+as a user would type [here]({% include this-page-in-gh.html option='raw' %}). 
 
 # Markdown features
 
@@ -47,9 +45,9 @@ automatically convert two hyphens (`--`) into an en dash (--), three (`---`)
 into an em-dash (---), and convert standard quote marks `"'hello'"` into fancy
 quote marks: "'hello'".
 
-Footnotes[^1] are added with `[^1]` notation; you then must define your footnote
-(usually the next paragraph is fine it will get automatically moved to the
-bottom of the page later).
+Footnotes[^1] are added with `[^1]` notation; you then must define your footnote.
+Uusually the next paragraph is fine but whereever you definie it, it will get
+automatically moved to the bottom of the page later.
 
 [^1]: The definition of the footnote!
 
@@ -139,6 +137,7 @@ print_hi('Tom')
 [1] "How are you?"
 ```
  
+
 
 
 
