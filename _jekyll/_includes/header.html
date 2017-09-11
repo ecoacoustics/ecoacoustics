@@ -39,11 +39,16 @@
             {%- continue %}
             {%- endunless %}
             {%- assign collection_url =  '/' | append: collection.label %}
+            
             <a class="navbar-item label" href="{{ collection_url }}">
               {{ collection.title | default: collection.category }}
             </a>
             {% assign docs_length = collection.docs | size  %}
             {% for doc in collection.docs %}
+            <!-- {{ doc.slug }} -->
+            {% if doc.slug == collection_name %}
+            {% continue %}
+            {% endif %}
             <a class="navbar-item" href="{{ doc.url }}">
               {{ doc.title | escape }}
             </a>

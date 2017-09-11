@@ -44,19 +44,19 @@ collections:
     title: "Societies"
   hardware:
     output: true
+    title: "Hardware"
   software_packages:
     output: true
+    title: "Software"
   applications:
     output: true
+    title: "Applications"
   deployment:
     output: true
     title: "Deployment"
   literature:
     output: true
     title: "Literature"
-  publications:
-    output: true
-    title: "Publications"
   sound_analysis:
     output: true
     title: Analysis Techniques

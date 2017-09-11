@@ -26,7 +26,6 @@ research:
   title: research
   collections:
     - literature
-    - publications
 software:
   title: software
   collections:

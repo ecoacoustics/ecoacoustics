@@ -2,7 +2,6 @@
 layout: page
 title: About Ecoacoustics
 subtitle: An introduction to the field
-
 ---
 
 

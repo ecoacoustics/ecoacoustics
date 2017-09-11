@@ -5,7 +5,7 @@ draft: true
 ---
 <div class="box" >
 <pre> 
-{{ site.pages | inspect }}
+{{ site.collections | where:"label",'hardware' | map: 'docs' | first | first |   inspect }}
 </pre>
 </div>
 
