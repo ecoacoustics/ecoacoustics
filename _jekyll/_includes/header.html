@@ -45,8 +45,8 @@
             </a>
             {% assign docs_length = collection.docs | size  %}
             {% for doc in collection.docs %}
-            <!-- {{ doc.slug }} -->
             {% if doc.slug == collection_name %}
+            {% assign docs_length = docs_length | minus: 1 %}
             {% continue %}
             {% endif %}
             <a class="navbar-item" href="{{ doc.url }}">
@@ -54,6 +54,8 @@
             </a>
             {%- endfor %}
             {% if docs_length == 0 %}
+            {% include navbar-empty-new-item.html %}
+            {% else %}
             {% include navbar-new-item.html %}
             {% endif %}
             {% if forloop.last == false %}

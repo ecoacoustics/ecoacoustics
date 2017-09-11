@@ -29,6 +29,6 @@ research:
 software:
   title: software
   collections:
-    - software
+    - software_packages
 
     
